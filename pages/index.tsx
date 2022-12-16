@@ -12,49 +12,48 @@ import Particle from "../components/particles";
 import Footer from "../components/footer";
 
 export default function Home() {
-    const text: string =
-        `#include <bits/stdc++.h>
-        using namespace std;
+    const text: string = `#include <bits/stdc++.h>
+    using namespace std;
 
-        #define int long long
-        const long long oo = (long long)1e18 + 500;
+    #define int long long
+    const long long oo = (long long)1e18 + 500;
 
-        template <typename T> void chmax(T& a, const T b) { a=max(a,b); }
-        template <typename T> void chmin(T& a, const T b) { a=min(a,b); }
+    template <typename T> void chmax(T& a, const T b) { a=max(a,b); }
+    template <typename T> void chmin(T& a, const T b) { a=min(a,b); }
 
-        int32_t main() {
-            ios_base::sync_with_stdio(false); cin.tie(0);
-            int n,k; cin >> n >> k;
-            vector<int> v;
-            int m=0;
-            int ans=-oo;
-            for(int i = 1; i <= (int)n; ++i) {
-                int x; cin >> x;
-                if(x)v.push_back(x);
-                if(x>0)--m;
-                if(x<0)++m;
-            }
-            int sum= 0;
-            for(auto i:v)sum+=i;
+    int32_t main() {
+        ios_base::sync_with_stdio(false); cin.tie(0);
+        int n,k; cin >> n >> k;
+        vector<int> v;
+        int m=0;
+        int ans=-oo;
+        for(int i = 1; i <= (int)n; ++i) {
+            int x; cin >> x;
+            if(x)v.push_back(x);
+            if(x>0)--m;
+            if(x<0)++m;
+        }
+        int sum= 0;
+        for(auto i:v)sum+=i;
+        chmax(ans, sum);
+        v.push_back(k);
+        sort((v).begin(), (v).end(),[](int a, int b) {
+            return llabs(a) < llabs(b);
+        });
+
+        int c = 0;
+        for(auto i:v) {
+            int idx = llabs(i);
+            int dif = idx-c;
+            sum+=dif*m;
+            c=idx;
+            if(i>0)++m;
+            else --m;
             chmax(ans, sum);
-            v.push_back(k);
-            sort((v).begin(), (v).end(),[](int a, int b) {
-                return llabs(a) < llabs(b);
-            });
-
-            int c = 0;
-            for(auto i:v) {
-                int idx = llabs(i);
-                int dif = idx-c;
-                sum+=dif*m;
-                c=idx;
-                if(i>0)++m;
-                else --m;
-                chmax(ans, sum);
-                if(llabs(i)==k)break;
-            }
-            cout << ans;
-        }`;
+            if(llabs(i)==k)break;
+        }
+        cout << ans;
+    }`;
 
     const [displayText, setDisplayText] = useState("");
 
