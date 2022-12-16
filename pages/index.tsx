@@ -69,8 +69,9 @@ export default function Home() {
             if (index > text.length) {
                 clearInterval(interval);
                 setDone(true);
-                const codeBlock: HTMLElement =
-                    document.querySelector("pre code");
+                const codeBlock = document.querySelector(
+                    "pre code"
+                ) as HTMLElement;
                 hljs.highlightBlock(codeBlock);
             }
         }, 100);
