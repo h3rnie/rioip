@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import photo from "../public/pexels-photo-2072600.jpeg";
+import photo from "../public/pexels-photo-2072600.jpg";
 
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";

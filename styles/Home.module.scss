@@ -123,13 +123,15 @@
 
         div,
         p,
-        ol,
-        ul,
         li,
         a {
             text-align: justify;
             font-size: max(1.5vw, 14px);
             margin: 0;
+        }
+
+        ol, ul {
+            margin: max(1vw, 6px) max(2vw, 12px);
         }
     }
 }
