@@ -80,7 +80,8 @@
     }
 
     > .code {
-        background: #000000;
+        height: max(40vw, 330px);
+        background: #292d35;
         border-radius: max(2.5vw, 6px);
         overflow: hidden;
         padding: 1vw;

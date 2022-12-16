@@ -74,7 +74,7 @@ export default function Home() {
                 ) as HTMLElement;
                 hljs.highlightBlock(codeBlock);
             }
-        }, 100);
+        }, 50);
     }, [text]);
 
     return (
