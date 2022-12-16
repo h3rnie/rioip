@@ -1,0 +1,44 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: max(1vw, 12px) max(3vw, 12px);
+    background: linear-gradient(20deg, #07a784, #0a7e5e);
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    > h2 {
+        margin: 0;
+        font-size: max(1.5vw, 18px);
+        padding: max(0.25vw, 2px) max(0.5vw, 2px);
+        border: max(0.25vw, 2px) solid #fff;
+        color: #fff;
+        letter-spacing: max(0.25vw, 2px);
+    }
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: max(5vw, 10px);
+
+        > a {
+            margin: 0;
+            font-size: max(1.5vw, 18px);
+            padding: max(0.5vw, 4px);
+            color: #fff;
+            transform: scale(1);
+
+            &:hover {
+                transition: all 0.25s ease-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

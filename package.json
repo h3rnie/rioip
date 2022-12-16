@@ -1,23 +1,53 @@
 {
-  "name": "rioip_no-app-dir",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@next/font": "13.0.7",
-    "@types/node": "18.11.15",
-    "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.9",
-    "eslint": "8.29.0",
-    "eslint-config-next": "13.0.7",
-    "next": "13.0.7",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.4"
-  }
+    "name": "rioip",
+    "version": "0.9.0",
+    "description": "The official website for the first inaugural Raffles Institution Olympiad in Informatics (Primary).",
+    "private": true,
+    "license": "MIT",
+    "keywords": [
+        "Raffles Institution",
+        "RIOIP",
+        "Olympiad in Informatics",
+        "IO",
+        "Informatics Olympiad",
+        "Singapore",
+        "Raffles Institution Olympiad in Informatics (Primary)"
+    ],
+    "scripts": {
+        "dev": "next dev",
+        "tb": "next dev --turbo",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prettier": "prettier --write ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/h3rnie/rioip.git"
+    },
+    "bugs": {
+        "url": "https://github.com/h3rnie/rioip/issues",
+        "email": "h3rnie@outlook.com"
+    },
+    "author": "Hernie <h3rnie@outlook.com> (https://hernie.vercel.app)",
+    "homepage": "https://rioip.vercel.app",
+    "dependencies": {
+        "@next/bundle-analyzer": "^13.0.7",
+        "@next/font": "~13.0.7",
+        "@types/node": "~18.11.15",
+        "@types/react": "~18.0.26",
+        "@types/react-dom": "~18.0.9",
+        "eslint": "~8.29.0",
+        "eslint-config-next": "~13.0.7",
+        "framer-motion": "^7.10.0",
+        "highlight.js": "^11.7.0",
+        "next": "~13.0.7",
+        "prettier": "^2.8.1",
+        "react": "~18.2.0",
+        "react-dom": "~18.2.0",
+        "react-tsparticles": "^2.6.0",
+        "sass": "^1.56.2",
+        "tsparticles": "^2.6.0",
+        "typescript": "~4.9.4"
+    }
 }

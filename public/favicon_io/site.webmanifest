@@ -1,0 +1,61 @@
+{
+    "name": "RI Olympiad in Informatics",
+    "short_name": "RIOIP",
+    "description": "The official website for the first inaugural Raffles Institution Olympiad in Informatics (Primary).",
+    "lang": "en-SG",
+    "dir": "ltr",
+    "orientation": "any",
+    "screenshots": [
+        {
+            "src": "/pexels-pixabay-247676.jpg",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "Low Angle View of Spiral Staircase Against Black Background (CC0)"
+        }
+    ],
+    "icons": [
+        {
+            "src": "/favicon_io/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/favicon_io/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Learn",
+            "short_name": "Learn",
+            "description": "Learn about Informatics",
+            "url": "/learn",
+            "icons": [
+                {
+                    "src": "/favicon_io/android-chrome-192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "FAQ",
+            "short_name": "FAQ",
+            "description": "Frequently Asked Questions",
+            "url": "/faq",
+            "icons": [
+                {
+                    "src": "/favicon_io/android-chrome-192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    "theme_color": "#07a783",
+    "background_color": "#ffffff",
+    "display": "fullscreen"
+}

@@ -1,0 +1,45 @@
+.container {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    font-weight: bold;
+    text-align: center;
+    padding: 5vw;
+    color: white;
+
+    > h1 {
+        font-size: max(10vw, 52px);
+        margin: 0;
+    }
+
+    > span {
+        font-size: max(4, 26px);
+        letter-spacing: 0.25vw;
+    }
+}
+
+.content {
+    background-image: url("../public/circuit_tile.png");
+
+    > h2 {
+        font-size: max(2vw, 18px);
+        margin: 4vw 8vw 2vw;
+    }
+
+    > p {
+        font-size: max(1.25vw, 14px);
+        margin: 2vw 6vw;
+    }
+
+    > code {
+        font-size: max(1.5vw, 16px);
+        margin: 2vw 6vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

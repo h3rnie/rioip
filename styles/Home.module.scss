@@ -1,0 +1,134 @@
+@mixin flowy-background {
+    @keyframes flow {
+        0%,
+        100% {
+            background-position: 0 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    animation: flow 10s ease-in-out infinite;
+    background: linear-gradient(
+        270deg,
+        rgb(131 58 180 / 100%) 0%,
+        rgb(253 29 29 / 100%) 50%,
+        rgb(252 176 69 / 100%) 100%
+    );
+    background-size: 250%;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    font-weight: bold;
+    text-align: center;
+    padding: 3vw;
+    background: transparent;
+
+    > h1 {
+        @include flowy-background;
+
+        font-size: max(4vw, 36px);
+        color: #00000000;
+        margin: 0.5vw;
+    }
+
+    > span {
+        font-size: max(2.5vw, 24px);
+        color: white;
+        letter-spacing: 0.25vw;
+    }
+}
+
+.container {
+    background-image: url("../public/circuit_tile.png");
+    padding: 4vw 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    flex-wrap: wrap;
+
+    > div {
+        width: max(35vw, 240px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+
+        > h2 {
+            text-align: center;
+            font-size: max(2vw, 24px);
+            margin: 0;
+        }
+
+        p {
+            text-align: justify;
+            font-size: max(1.5vw, 14px);
+            margin: 0;
+        }
+    }
+
+    > .code {
+        background: #000000;
+        border-radius: max(2.5vw, 6px);
+        overflow: hidden;
+        padding: 1vw;
+
+        code {
+            font-size: max(0.75vw, 6px);
+            color: #ffffff;
+        }
+    }
+}
+
+.content {
+    background-image: url("../public/circuit_tile.png");
+    padding: 4vw 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+
+    > div {
+        width: max(50vw, 240px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        > h2 {
+            text-align: center;
+            font-size: max(2vw, 24px);
+            margin: 0;
+        }
+
+        div,
+        p,
+        ol,
+        ul,
+        li,
+        a {
+            text-align: justify;
+            font-size: max(1.5vw, 14px);
+            margin: 0;
+        }
+    }
+}
