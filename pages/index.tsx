@@ -319,8 +319,10 @@ export default function Home() {
                             Registration will be in teams of 3-4 students.
                             Please contact your school&apos;s teachers for the
                             registration of the competition or the training.
-                            <li>Workshop days: T1W7 and T1W8 Fridays</li>
-                            <li>Competition: T1W10 Thursday</li>
+                            <ul>
+                                <li>Workshop days: T1W7 and T1W8 Fridays</li>
+                                <li>Competition: T1W10 Thursday</li>
+                            </ul>
                         </motion.div>
                     </div>
                     <div>
