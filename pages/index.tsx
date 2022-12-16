@@ -12,8 +12,8 @@ import Particle from "../components/particles";
 import Footer from "../components/footer";
 
 export default function Home() {
-    const text: string = `
-        #include <bits/stdc++.h>
+    const text: string =
+        `#include <bits/stdc++.h>
         using namespace std;
 
         #define int long long
@@ -54,11 +54,9 @@ export default function Home() {
                 if(llabs(i)==k)break;
             }
             cout << ans;
-        }
-    `;
+        }`;
 
     const [displayText, setDisplayText] = useState("");
-    const [done, setDone] = useState(false);
 
     useEffect(() => {
         let index: number = 0;
@@ -68,7 +66,6 @@ export default function Home() {
 
             if (index > text.length) {
                 clearInterval(interval);
-                setDone(true);
                 const codeBlock = document.querySelector(
                     "pre code"
                 ) as HTMLElement;
@@ -259,7 +256,7 @@ export default function Home() {
                         transition={{ type: "spring", duration: 1.5 }}
                     >
                         <motion.pre>
-                            <code className="language-c++">{displayText}</code>
+                            <code className="language-c++">{displayText}_</code>
                         </motion.pre>
                     </motion.div>
                 </div>
