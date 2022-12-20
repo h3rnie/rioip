@@ -55,23 +55,27 @@ int32_t main() {
     cout << ans;
 }`;
 
-    const [displayText, setDisplayText] = useState("");
+    // const [displayText, setDisplayText] = useState("");
+    const [displayTextIdx,setDisplayTextIdx] = useState(0);
+    
+    const codeMarkup = () => { 
+      const meow = hljs.highlight(
+          text.substring(0, displayTextIdx),
+          {language: "c++", ignoreIllegals: true}).value;
+      return { __html: meow };
+    };
 
     useEffect(() => {
-        let index: number = 0;
         const interval = setInterval(() => {
-            setDisplayText(text.substring(0, index));
-            index++;
+            setDisplayTextIdx(displayTextIdx+1);
 
-            if (index > text.length) {
+            if (displayTextIdx+1 > text.length) {
                 clearInterval(interval);
-                const codeBlock = document.querySelector(
-                    "pre code"
-                ) as HTMLElement;
-                hljs.highlightBlock(codeBlock);
             }
-        }, 50);
-    }, [text]);
+        }, 10);
+
+        return () => clearInterval(interval);
+    });
 
     return (
         <>
@@ -255,7 +259,7 @@ int32_t main() {
                         transition={{ type: "spring", duration: 1.5 }}
                     >
                         <motion.pre>
-                            <code className="language-c++">{displayText}_</code>
+                            <code className="language-c++" dangerouslySetInnerHTML={codeMarkup()}></code>
                         </motion.pre>
                     </motion.div>
                 </div>
