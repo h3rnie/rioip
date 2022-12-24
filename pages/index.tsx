@@ -13,65 +13,69 @@ import Footer from "../components/footer";
 
 export default function Home() {
     const text: string = `#include <bits/stdc++.h>
-    using namespace std;
+using namespace std;
 
-    #define int long long
-    const long long oo = (long long)1e18 + 500;
+#define int long long
+const long long oo = (long long)1e18 + 500;
 
-    template <typename T> void chmax(T& a, const T b) { a=max(a,b); }
-    template <typename T> void chmin(T& a, const T b) { a=min(a,b); }
+template <typename T> void chmax(T& a, const T b) { a=max(a,b); }
+template <typename T> void chmin(T& a, const T b) { a=min(a,b); }
 
-    int32_t main() {
-        ios_base::sync_with_stdio(false); cin.tie(0);
-        int n,k; cin >> n >> k;
-        vector<int> v;
-        int m=0;
-        int ans=-oo;
-        for(int i = 1; i <= (int)n; ++i) {
-            int x; cin >> x;
-            if(x)v.push_back(x);
-            if(x>0)--m;
-            if(x<0)++m;
-        }
-        int sum= 0;
-        for(auto i:v)sum+=i;
+int32_t main() {
+    ios_base::sync_with_stdio(false); cin.tie(0);
+    int n,k; cin >> n >> k;
+    vector<int> v;
+    int m=0;
+    int ans=-oo;
+    for(int i = 1; i <= (int)n; ++i) {
+        int x; cin >> x;
+        if(x)v.push_back(x);
+        if(x>0)--m;
+        if(x<0)++m;
+    }
+    int sum= 0;
+    for(auto i:v)sum+=i;
+    chmax(ans, sum);
+    v.push_back(k);
+    sort((v).begin(), (v).end(),[](int a, int b) {
+        return llabs(a) < llabs(b);
+    });
+
+    int c = 0;
+    for(auto i:v) {
+        int idx = llabs(i);
+        int dif = idx-c;
+        sum+=dif*m;
+        c=idx;
+        if(i>0)++m;
+        else --m;
         chmax(ans, sum);
-        v.push_back(k);
-        sort((v).begin(), (v).end(),[](int a, int b) {
-            return llabs(a) < llabs(b);
-        });
+        if(llabs(i)==k)break;
+    }
+    cout << ans;
+}`;
 
-        int c = 0;
-        for(auto i:v) {
-            int idx = llabs(i);
-            int dif = idx-c;
-            sum+=dif*m;
-            c=idx;
-            if(i>0)++m;
-            else --m;
-            chmax(ans, sum);
-            if(llabs(i)==k)break;
-        }
-        cout << ans;
-    }`;
-
-    const [displayText, setDisplayText] = useState("");
+    // const [displayText, setDisplayText] = useState("");
+    const [displayTextIdx,setDisplayTextIdx] = useState(0);
+    
+    const codeMarkup = () => { 
+      const meow = hljs.highlight(
+          text.substring(0, displayTextIdx),
+          {language: "c++", ignoreIllegals: true}).value;
+      return { __html: meow };
+    };
 
     useEffect(() => {
-        let index: number = 0;
         const interval = setInterval(() => {
-            setDisplayText(text.substring(0, index));
-            index++;
+            setDisplayTextIdx(displayTextIdx+1);
 
-            if (index > text.length) {
+            if (displayTextIdx+1 > text.length) {
                 clearInterval(interval);
-                const codeBlock = document.querySelector(
-                    "pre code"
-                ) as HTMLElement;
-                hljs.highlightBlock(codeBlock);
             }
-        }, 50);
-    }, [text]);
+        }, 10);
+
+        return () => clearInterval(interval);
+    });
 
     return (
         <>
@@ -255,7 +259,7 @@ export default function Home() {
                         transition={{ type: "spring", duration: 1.5 }}
                     >
                         <motion.pre>
-                            <code className="language-c++">{displayText}_</code>
+                            <code className="language-c++" dangerouslySetInnerHTML={codeMarkup()}></code>
                         </motion.pre>
                     </motion.div>
                 </div>
