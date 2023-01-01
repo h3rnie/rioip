@@ -303,10 +303,9 @@ export default function Learn() {
                         other will create a blank line. Another way to insert a
                         new line, is with the <code>endl</code> manipulator.
                     </p>
-                    <h2>Learn more about C++ and RIOIP here!</h2>
-                    <br/>
                     <iframe
-                        src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=true&loop=true&delayms=3000"
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=false&loop=true&delayms=1"
+                        frameBorder={0}
                         width="960"
                         height="569"
                         allowFullScreen={true}
