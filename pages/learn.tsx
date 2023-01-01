@@ -202,109 +202,24 @@ export default function Learn() {
                         makes it easy for programmers to switch to C++ or vice
                         versa.
                     </p>
-                    <h2>Getting Started with C++, Intalling an IDE</h2>
-                    <p>
-                        To start using C++, you need two things: A text editor,
-                        like Notepad, to write C++ code A compiler, like GCC, to
-                        translate the C++ code into a language that the computer
-                        will understand There are many text editors and
-                        compilers to choose from. In this tutorial, we will use
-                        an IDE. An IDE (Integrated Development Environment) is
-                        used to edit AND compile the code. Popular IDE&apos;s
-                        include Code::Blocks, Eclipse, and Visual Studio. These
-                        are all free, and they can be used to both edit and
-                        debug C++ code. Note: Web-based IDE&apos;s can work as
-                        well, but functionality is limited.
-                    </p>
-                    <h2>Writing our First C++ Code</h2>
-                    <p>
-                        Let&apos;s create our first C++ file. Write the
-                        following C++ code and save the file ending in{" "}
-                        <code>.cpp</code> &#40;File &gt; Save File as&#41;:
-                    </p>
-                    <code>
-                        #include &#60;iostream&#62;
-                        <br />
-                        using namespace std;
-                        <br />
-                        <br />
-                        int main() &#123;
-                        <br />
-                        &nbsp;cout &#60;&#60; &quot;Hello World!&quot;;
-                        <br />
-                        &nbsp;return 0;
-                        <br />
-                        &#125;
-                    </code>
-                    <p>
-                        Line 1: <code>#include {"<iostream>"}</code> is a header
-                        file library that lets us work with input and output
-                        objects, such as
-                        <code>cout</code> &#40;used in line 5&#41;. Header files
-                        add functionality to C++ programs.
-                        <br />
-                        Line 2: <code>using namespace std</code> means that we
-                        can use names for objects and variables from the
-                        standard library. Don&apos;t worry if you don&apos;t
-                        understand how <code>#include &#60;iostream&#61;</code>{" "}
-                        and
-                        <code>using namespace std</code> works. Just think of it
-                        as something that &#40;almost&#41; always appears in
-                        your program.
-                        <br />
-                        Line 3: A blank line. C++ ignores white space. But we
-                        use it to make the code more readable.
-                        <br />
-                        Line 4: Another thing that always appear in a C++
-                        program, is <code>int main&#40;&#41;</code>. This is
-                        called a function. Any code inside its curly brackets{" "}
-                        <code>&#123;&#125;</code>
-                        will be executed. Line 5: <code>cout</code>{" "}
-                        &#40;pronounced &apos;see-out&apos;&#41; is an object
-                        used together with the insertion operator &#40;
-                        <code>&#60;&#60;</code>&#41; to output/print text. In
-                        our example it will output &apos;Hello World&apos;.
-                        <br />
-                        Note: Every C++ statement ends with a semicolon ;.
-                        <br />
-                        Note: The body of <code>int main&#40;&#41;</code>
-                        could also been written as:{" "}
-                        <code>
-                            int main &#40;&#41; &#123; cout &#60;&#60;
-                            &apos;Hello World!&apos;; return 0; &#125;
-                        </code>{" "}
-                        Remember: The compiler ignores white spaces. However,
-                        multiple lines makes the code more readable.
-                        <br />
-                        Line 6: return 0 ends the main function.
-                        <br />
-                        Line 7: Do not forget to add the closing curly bracket{" "}
-                        <code>&#125;</code> to actually end the main function.
-                        <br />
-                        You might see some C++ programs that runs without the
-                        standard namespace library. The using namespace std line
-                        can be omitted and replaced with the std keyword,
-                        followed by the :: operator for some objects:
-                    </p>
                     <h2>
-                        C++ Output, <code>cout</code>
+                        Learn more about Informatics Olympiad below!
                     </h2>
-                    <p>
-                        The <code>cout</code> object, together with the
-                        &#60;&#60; operator, is used to output values/print
-                        text.
-                    </p>
-                    <h2>
-                        C++ New Line, <code>\n</code>
-                    </h2>
-                    <p>
-                        To insert a new line, you can use the <code>\n</code>{" "}
-                        character. Two <code>\n</code> characters after each
-                        other will create a blank line. Another way to insert a
-                        new line, is with the <code>endl</code> manipulator.
-                    </p>
+                    <h3 style={{padding: "2vw", paddingBottom: "1vw"}}>
+                        Briefing on IO
+                    </h3>
                     <iframe
-                        src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=false&loop=true&delayms=1"
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=false&loop=false&delayms=1"
+                        frameBorder={0}
+                        width="960"
+                        height="569"
+                        allowFullScreen={true}
+                    ></iframe>
+                    <h3 style={{padding: "2vw", paddingBottom: "1vw"}}>
+                        Intro to C++
+                    </h3>
+                    <iframe
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vRFMfKnCLkVha4q1X5NhyS6NMkmsBr0JGBIiqzZA3kuSuHmziG9mslyp1pgppR0lICwxL99OcH7o7lo/embed?start=false&loop=false&delayms=1"
                         frameBorder={0}
                         width="960"
                         height="569"
