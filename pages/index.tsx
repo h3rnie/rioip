@@ -55,22 +55,22 @@ int32_t main() {
     cout << ans;
 }`;
 
-    const [displayTextIdx,setDisplayTextIdx] = useState(0);
+    const [displayTextIdx, setDisplayTextIdx] = useState(0);
     const codeMarkup = () => {
-      const meow = hljs.highlight(
-          text.substring(0, displayTextIdx),
-          {language: "c++", ignoreIllegals: true}).value;
-      return { __html: meow };
+        const meow = hljs.highlight(text.substring(0, displayTextIdx), {
+            language: "c++",
+            ignoreIllegals: true,
+        }).value;
+        return { __html: meow };
     };
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setDisplayTextIdx(displayTextIdx+1);
-            if (displayTextIdx+1 > text.length) {
+            setDisplayTextIdx(displayTextIdx + 1);
+            if (displayTextIdx + 1 > text.length) {
                 clearInterval(interval);
             }
         }, 10);
-
         return () => clearInterval(interval);
     });
 
@@ -79,69 +79,12 @@ int32_t main() {
             <Head>
                 <title>RIOIP</title>
                 <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <meta charSet="UTF-8" />
-                <meta
-                    httpEquiv="X-UA-Compatible"
-                    content="IE=edge"
-                />
-                <meta
-                    name="theme-color"
-                    content="#07a783"
-                />
-                <link
-                    rel="shortcut icon"
-                    sizes="512x512"
-                    href="/favicon_io/android-chrome-512x512.png"
-                />
-                <link
-                    rel="shortcut icon"
-                    sizes="192x192"
-                    href="/favicon_io/android-chrome-192x192.png"
-                />
-                <link
-                    rel="apple-touch-icon"
-                    sizes="180x180"
-                    href="/favicon_io/apple-touch-icon.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="32x32"
-                    href="/favicon_io/favicon-32x32.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="16x16"
-                    href="/favicon_io/favicon-16x16.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/ico"
-                    href="/favicon_io/favicon.ico"
-                />
-                <link
-                    rel="manifest"
-                    href="/favicon_io/site.webmanifest"
-                ></link>
-                <meta
                     name="description"
                     content="The official website for the first inaugural Raffles Institution Olympiad in Informatics (Primary)."
                 />
                 <meta
                     name="keywords"
                     content="Raffles Institution, RIOIP, Olympiad in Informatics, IO, Informatics Olympiad, Singapore, Raffles Institution Olympiad in Informatics (Primary)"
-                />
-                <meta
-                    name="author"
-                    content="Raffles Institution"
-                />
-                <meta
-                    name="robots"
-                    content="index, follow"
                 />
                 <meta
                     property="og:type"
@@ -196,7 +139,6 @@ int32_t main() {
                     content="Low Angle View of Spiral Staircase Against Black Background (CC0)"
                 />
             </Head>
-
             <main>
                 <Navbar />
                 <Particle />
@@ -255,9 +197,9 @@ int32_t main() {
                         viewport={{ once: true }}
                         transition={{ type: "spring", duration: 1.5 }}
                     >
-                        <motion.pre>
-                            <code className="language-c++" dangerouslySetInnerHTML={codeMarkup()}></code>
-                        </motion.pre>
+                        <pre>
+                            <code dangerouslySetInnerHTML={codeMarkup()} />
+                        </pre>
                     </motion.div>
                 </div>
                 <div className={styles.content}>

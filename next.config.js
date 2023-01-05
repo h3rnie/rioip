@@ -11,7 +11,10 @@ module.exports = withAnalyzer({
         buildActivityPosition: "bottom-left",
     },
     experimental: {
-        runtime: "experimental-edge",
+        runtime:
+            process.env.NODE_ENV === "production"
+                ? "experimental-edge"
+                : "nodejs",
     },
     async headers() {
         return [

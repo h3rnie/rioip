@@ -32,69 +32,12 @@ export default function Learn() {
             <Head>
                 <title>RIOIP | Learn</title>
                 <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <meta charSet="UTF-8" />
-                <meta
-                    httpEquiv="X-UA-Compatible"
-                    content="IE=edge"
-                />
-                <meta
-                    name="theme-color"
-                    content="#07a783"
-                />
-                <link
-                    rel="shortcut icon"
-                    sizes="512x512"
-                    href="/favicon_io/android-chrome-512x512.png"
-                />
-                <link
-                    rel="shortcut icon"
-                    sizes="192x192"
-                    href="/favicon_io/android-chrome-192x192.png"
-                />
-                <link
-                    rel="apple-touch-icon"
-                    sizes="180x180"
-                    href="/favicon_io/apple-touch-icon.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="32x32"
-                    href="/favicon_io/favicon-32x32.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="16x16"
-                    href="/favicon_io/favicon-16x16.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/ico"
-                    href="/favicon_io/favicon.ico"
-                />
-                <link
-                    rel="manifest"
-                    href="/favicon_io/site.webmanifest"
-                ></link>
-                <meta
                     name="description"
                     content="The official website for the first inaugural Raffles Institution Olympiad in Informatics (Primary)."
                 />
                 <meta
                     name="keywords"
                     content="Raffles Institution, RIOIP, Olympiad in Informatics, IO, Informatics Olympiad, Singapore, Raffles Institution Olympiad in Informatics (Primary)"
-                />
-                <meta
-                    name="author"
-                    content="Raffles Institution"
-                />
-                <meta
-                    name="robots"
-                    content="index, follow"
                 />
                 <meta
                     property="og:type"
@@ -114,7 +57,7 @@ export default function Learn() {
                 />
                 <meta
                     property="og:image"
-                    content="/pexels-pixabay-247676.jpg"
+                    content="/socials.jpg"
                 />
                 <meta
                     property="og:image-alt"
@@ -142,21 +85,19 @@ export default function Learn() {
                 />
                 <meta
                     property="twitter:image"
-                    content="/pexels-pixabay-247676.jpg"
+                    content="/socials.jpg"
                 />
                 <meta
                     property="twitter:image-alt"
                     content="Low Angle View of Spiral Staircase Against Black Background (CC0)"
                 />
             </Head>
-
             <main>
                 <Navbar />
                 <Image
                     src={photo}
                     alt="Low Angle Photography of Coconut Trees Under A Starry Sky"
                     placeholder="blur"
-                    quality={100}
                     priority
                     style={{
                         width: "100%",
@@ -202,10 +143,8 @@ export default function Learn() {
                         makes it easy for programmers to switch to C++ or vice
                         versa.
                     </p>
-                    <h2>
-                        Learn more about Informatics Olympiad below!
-                    </h2>
-                    <h3 style={{padding: "2vw", paddingBottom: "1vw"}}>
+                    <h2>Learn more about Informatics Olympiad below!</h2>
+                    <h3 style={{ padding: "2vw", paddingBottom: "1vw" }}>
                         Briefing on IO
                     </h3>
                     <iframe
@@ -215,7 +154,7 @@ export default function Learn() {
                         height="569"
                         allowFullScreen={true}
                     ></iframe>
-                    <h3 style={{padding: "2vw", paddingBottom: "1vw"}}>
+                    <h3 style={{ padding: "2vw", paddingBottom: "1vw" }}>
                         Intro to C++
                     </h3>
                     <iframe

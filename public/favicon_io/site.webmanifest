@@ -5,9 +5,15 @@
     "lang": "en-SG",
     "dir": "ltr",
     "orientation": "any",
+    "display": "fullscreen",
+    "start_url": ".",
+    "scope": "/",
+    "theme_color": "#07a783",
+    "background_color": "#fff",
+    "categories": ["technology", "informatics", "programming"],
     "screenshots": [
         {
-            "src": "/pexels-pixabay-247676.jpg",
+            "src": "/socials.jpg",
             "type": "image/png",
             "platform": "wide",
             "label": "Low Angle View of Spiral Staircase Against Black Background (CC0)"
@@ -54,8 +60,5 @@
                 }
             ]
         }
-    ],
-    "theme_color": "#07a783",
-    "background_color": "#ffffff",
-    "display": "fullscreen"
+    ]
 }
