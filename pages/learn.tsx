@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import photo from "../public/pexels-photo-2072600.jpg";
+import photo from "../public/photo_2072600.jpg";
 
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -15,7 +15,7 @@ export default function Learn() {
     const text: string = "Competitive Programming";
 
     useEffect(() => {
-        let index: number = 0;
+        let index = 1;
         const interval = setInterval(() => {
             setDisplayText(text.substring(0, index));
             index++;
@@ -24,7 +24,7 @@ export default function Learn() {
                 clearInterval(interval);
                 setDone(true);
             }
-        }, 200);
+        }, 100);
     }, [text]);
 
     return (

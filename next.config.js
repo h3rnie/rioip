@@ -1,19 +1,15 @@
 /** @type {import('next').NextConfig} */
 
-const ContentSecurityPolicy = `
-    default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
-    child-src 'self';
-    style-src 'self' 'unsafe-inline';
-    font-src 'self';
-    img-src 'self';
-    media-src 'self';
-    connect-src 'self';
-    frame-src 'self';
-`;
-
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
+const withAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withAnalyzer({
+    reactStrictMode: true,
+    devIndicators: {
+        buildActivity: true,
+        buildActivityPosition: "bottom-left",
+    },
     experimental: {
         runtime: "experimental-edge",
     },
@@ -39,8 +35,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
                         value: "SAMEORIGIN",
                     },
                     /* {
-                        key: 'Permissions-Policy',
-                        value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()'
+                        key: "Permissions-Policy",
+                        value: ""
                     }, */
                     {
                         key: "X-Content-Type-Options",
@@ -48,23 +44,28 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
                     },
                     {
                         key: "Referrer-Policy",
-                        value: "strict-origin-when-cross-origin",
+                        value: "strict-origin",
                     },
-                    {
+                    /* {
                         key: "Content-Security-Policy",
-                        value: ContentSecurityPolicy.replace(
-                            /\s{2,}/g,
-                            " "
-                        ).trim(),
-                    },
+                        value: "",
+                    }, */
                 ],
             },
         ];
     },
+    async redirects() {
+        return [
+            {
+                source: "/src",
+                destination: "https://github.com/h3rnie/rioip",
+                permanent: true,
+            },
+            {
+                source: "/git",
+                destination: "https://github.com/h3rnie/rioip.git",
+                permanent: true,
+            },
+        ];
+    },
 });
-
-const nextConfig = {
-    reactStrictMode: true,
-};
-
-module.exports = withBundleAnalyzer(nextConfig);

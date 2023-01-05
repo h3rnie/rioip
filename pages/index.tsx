@@ -12,7 +12,7 @@ import Particle from "../components/particles";
 import Footer from "../components/footer";
 
 export default function Home() {
-    const text: string = `#include <bits/stdc++.h>
+    const text = `#include <bits/stdc++.h>
     using namespace std;
 
     #define int long long
@@ -58,11 +58,10 @@ export default function Home() {
     const [displayText, setDisplayText] = useState("");
 
     useEffect(() => {
-        let index: number = 0;
+        let index = 0;
         const interval = setInterval(() => {
             setDisplayText(text.substring(0, index));
             index++;
-
             if (index > text.length) {
                 clearInterval(interval);
                 const codeBlock = document.querySelector(
@@ -160,7 +159,7 @@ export default function Home() {
                 />
                 <meta
                     property="og:image"
-                    content="/pexels-pixabay-247676.jpg"
+                    content="/socials.jpg"
                 />
                 <meta
                     property="og:image-alt"
@@ -188,7 +187,7 @@ export default function Home() {
                 />
                 <meta
                     property="twitter:image"
-                    content="/pexels-pixabay-247676.jpg"
+                    content="/socials.jpg"
                 />
                 <meta
                     property="twitter:image-alt"
