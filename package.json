@@ -13,8 +13,8 @@
     ],
     "private": true,
     "license": "MIT",
-    "homepage": "https://rioip.vercel.app",
-    "author": "Hernie <h3rnie@outlook.com> (https://hernie.vercel.app)",
+    "homepage": "https://rioip.dev.hernie.me",
+    "author": "Hernie <h3rnie@outlook.com> (https://hernie.me)",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/h3rnie/rioip.git"

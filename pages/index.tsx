@@ -71,7 +71,7 @@ int32_t main() {
             if (displayTextIdx + 1 > text.length) {
                 clearInterval(interval);
             }
-        }, 1);
+        }, 20);
         return () => clearInterval(interval);
     });
 
@@ -93,7 +93,7 @@ int32_t main() {
                 />
                 <meta
                     property="og:url"
-                    content="https://rioip.vercel.app"
+                    content="https://rioip.dev.hernie.me"
                 />
                 <meta
                     property="og:title"
@@ -121,7 +121,7 @@ int32_t main() {
                 />
                 <meta
                     property="twitter:url"
-                    content="https://rioip.vercel.app"
+                    content="https://rioip.dev.hernie.me"
                 />
                 <meta
                     property="twitter:title"

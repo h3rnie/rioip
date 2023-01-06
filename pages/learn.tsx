@@ -2,9 +2,7 @@ import Head from "next/head";
 import styles from "../styles/learn.module.scss";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
 import Image from "next/image";
-import photo from "../public/photo_2072600.jpg";
 
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -42,7 +40,7 @@ export default function Learn() {
                 />
                 <meta
                     property="og:url"
-                    content="https://rioip.vercel.app"
+                    content="https://rioip.dev.hernie.me"
                 />
                 <meta
                     property="og:title"
@@ -70,7 +68,7 @@ export default function Learn() {
                 />
                 <meta
                     property="twitter:url"
-                    content="https://rioip.vercel.app"
+                    content="https://rioip.dev.hernie.me"
                 />
                 <meta
                     property="twitter:title"
@@ -92,9 +90,11 @@ export default function Learn() {
             <Navbar />
             <main>
                 <Image
-                    src={photo}
-                    alt="Low Angle Photography of Coconut Trees Under A Starry Sky"
-                    placeholder="blur"
+                    aria-hidden="true"
+                    src="/sazonova-2072600_5760-3840.jpg"
+                    alt="Low Angle Photography of Coconut Trees Under A Starry Sky (Thailand)"
+                    width={5760}
+                    height={3840}
                     priority
                     style={{
                         width: "100%",
