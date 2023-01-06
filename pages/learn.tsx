@@ -10,19 +10,16 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 export default function Learn() {
+    const text = "Competitive Programming";
     const [displayText, setDisplayText] = useState("");
-    const [done, setDone] = useState(false);
-    const text: string = "Competitive Programming";
 
     useEffect(() => {
         let index = 1;
         const interval = setInterval(() => {
             setDisplayText(text.substring(0, index));
             index++;
-
             if (index > text.length) {
                 clearInterval(interval);
-                setDone(true);
             }
         }, 100);
     }, [text]);
@@ -92,8 +89,8 @@ export default function Learn() {
                     content="Low Angle View of Spiral Staircase Against Black Background (CC0)"
                 />
             </Head>
+            <Navbar />
             <main>
-                <Navbar />
                 <Image
                     src={photo}
                     alt="Low Angle Photography of Coconut Trees Under A Starry Sky"
@@ -107,16 +104,20 @@ export default function Learn() {
                 />
                 <div className={styles.container}>
                     <motion.h1
-                        initial={{ y: -256, opacity: 0, scale: 0.9 }}
+                        initial={{ y: -64, opacity: 0, scale: 0.8 }}
                         animate={{ y: 0, opacity: 1, scale: 1 }}
-                        transition={{ type: "spring", duration: 1.5 }}
+                        transition={{ type: "spring" }}
                     >
                         Intro to C++
                     </motion.h1>
-                    <span>
+                    <motion.span
+                        initial={{ y: 16, opacity: 0, scale: 0.8 }}
+                        animate={{ y: 0, opacity: 1, scale: 1 }}
+                        transition={{ type: "spring" }}
+                    >
                         {displayText}
-                        {done ? "" : "_"}
-                    </span>
+                        {displayText === text ? "" : "_"}
+                    </motion.span>
                 </div>
                 <div className={styles.content}>
                     <h2>What is C++?</h2>
@@ -143,30 +144,23 @@ export default function Learn() {
                         makes it easy for programmers to switch to C++ or vice
                         versa.
                     </p>
-                    <h2>Learn more about Informatics Olympiad below!</h2>
-                    <h3 style={{ padding: "2vw", paddingBottom: "1vw" }}>
-                        Briefing on IO
-                    </h3>
-                    <iframe
-                        src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=false&loop=false&delayms=1"
-                        frameBorder={0}
-                        width="960"
-                        height="569"
-                        allowFullScreen={true}
-                    ></iframe>
-                    <h3 style={{ padding: "2vw", paddingBottom: "1vw" }}>
-                        Intro to C++
-                    </h3>
-                    <iframe
-                        src="https://docs.google.com/presentation/d/e/2PACX-1vRFMfKnCLkVha4q1X5NhyS6NMkmsBr0JGBIiqzZA3kuSuHmziG9mslyp1pgppR0lICwxL99OcH7o7lo/embed?start=false&loop=false&delayms=1"
-                        frameBorder={0}
-                        width="960"
-                        height="569"
-                        allowFullScreen={true}
-                    ></iframe>
+                    <h2>Briefing on IO</h2>
+                    <div>
+                        <iframe
+                            src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=false&loop=false&delayms=1"
+                            allowFullScreen={true}
+                        />
+                    </div>
+                    <h2>Intro to C++</h2>
+                    <div>
+                        <iframe
+                            src="https://docs.google.com/presentation/d/e/2PACX-1vRFMfKnCLkVha4q1X5NhyS6NMkmsBr0JGBIiqzZA3kuSuHmziG9mslyp1pgppR0lICwxL99OcH7o7lo/embed?start=false&loop=false&delayms=1"
+                            allowFullScreen={true}
+                        />
+                    </div>
                 </div>
-                <Footer />
             </main>
+            <Footer />
         </>
     );
 }

@@ -1,13 +1,14 @@
 .footer {
     background: #000000;
+    color: #fff;
+    padding: 6vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 20vw;
-    padding: 3vw;
-    font-size: max(1.25vw, 12px);
-    color: #fff;
+    gap: 3vw;
+    font-size: max(1.5vw, 16px);
+    text-align: center;
 
     > a:hover {
         text-decoration: underline;

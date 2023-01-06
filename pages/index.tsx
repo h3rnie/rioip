@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Balancer from "react-wrap-balancer";
 
 import { useEffect, useState } from "react";
 import hljs from "highlight.js";
@@ -70,7 +71,7 @@ int32_t main() {
             if (displayTextIdx + 1 > text.length) {
                 clearInterval(interval);
             }
-        }, 10);
+        }, 1);
         return () => clearInterval(interval);
     });
 
@@ -139,47 +140,49 @@ int32_t main() {
                     content="Low Angle View of Spiral Staircase Against Black Background (CC0)"
                 />
             </Head>
+            <Navbar />
             <main>
-                <Navbar />
                 <Particle />
                 <div className={styles.hero}>
                     <motion.span
-                        initial={{ y: -256, opacity: 0, scale: 0.9 }}
+                        initial={{ y: -64, opacity: 0, scale: 0.8 }}
                         animate={{ y: 0, opacity: 1, scale: 1 }}
-                        transition={{ type: "spring", duration: 1 }}
+                        transition={{ type: "spring" }}
                     >
                         1<sup>st</sup> Inaugural
                     </motion.span>
                     <motion.h1
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0.2, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5, duration: 1 }}
+                        transition={{ type: "spring" }}
                     >
-                        Raffles Institution Olympiad in Informatics
+                        <Balancer>
+                            Raffles Institution Olympiad in Informatics
+                        </Balancer>
                     </motion.h1>
                     <motion.span
-                        initial={{ y: 256, opacity: 0, scale: 0.9 }}
+                        initial={{ y: 64, opacity: 0, scale: 0.8 }}
                         animate={{ y: 0, opacity: 1, scale: 1 }}
-                        transition={{ type: "spring", duration: 1 }}
+                        transition={{ type: "spring" }}
                     >
                         Primary
                     </motion.span>
                 </div>
                 <div className={styles.container}>
-                    <div className={styles.txt}>
+                    <section>
                         <motion.h2
-                            initial={{ x: -256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: -64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             What is an Informatics Olympiad &#40;IO&#41;?
                         </motion.h2>
                         <motion.p
-                            initial={{ x: 256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: 64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
                             transition={{ type: "spring", duration: 1 }}
+                            viewport={{ once: true }}
                         >
                             Informatics Olympiad is one of many Science
                             Olympiads held across the globe with emphasis on
@@ -189,34 +192,31 @@ int32_t main() {
                             very first IO competition, RIOIP, for primary school
                             students in Singapore.
                         </motion.p>
-                    </div>
-                    <motion.div
-                        className={styles.code}
-                        initial={{ x: 256, opacity: 0, scale: 0.75 }}
+                    </section>
+                    <motion.section
+                        initial={{ x: 64, opacity: 0, scale: 0.8 }}
                         whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                        transition={{ type: "spring" }}
                         viewport={{ once: true }}
-                        transition={{ type: "spring", duration: 1.5 }}
                     >
                         <pre>
                             <code dangerouslySetInnerHTML={codeMarkup()} />
                         </pre>
-                    </motion.div>
-                </div>
-                <div className={styles.content}>
-                    <div>
+                    </motion.section>
+                    <section>
                         <motion.h2
-                            initial={{ x: -256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: -64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             About the Competition
                         </motion.h2>
                         <motion.div
-                            initial={{ x: -256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: 64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Participants are tested on computer programming and
                             problem-solving of algorithmic nature to sharpen
@@ -243,21 +243,21 @@ int32_t main() {
                                 <li>Practical test with CMS</li>
                             </ol>
                         </motion.div>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <motion.h2
-                            initial={{ x: 256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: -64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Registration
                         </motion.h2>
                         <motion.div
-                            initial={{ x: 256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: 64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Registration will be in teams of 3-4 students.
                             Please contact your school&apos;s teachers for the
@@ -267,41 +267,41 @@ int32_t main() {
                                 <li>Competition: T1W10 Thursday</li>
                             </ul>
                         </motion.div>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <motion.h2
-                            initial={{ x: -256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: -64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Prerequisites
                         </motion.h2>
                         <motion.p
-                            initial={{ x: -256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: 64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Mathematics Olympiad experience or basic knowledge
                             in Programming, in addition to an open mindset to
                             learn and grow during the workshop.
                         </motion.p>
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <motion.h2
-                            initial={{ x: 256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: -64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Syllabus
                         </motion.h2>
                         <motion.div
-                            initial={{ x: 256, opacity: 0, scale: 0.9 }}
+                            initial={{ x: 64, opacity: 0, scale: 0.8 }}
                             whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ type: "spring" }}
                             viewport={{ once: true }}
-                            transition={{ type: "spring", duration: 1 }}
                         >
                             Recommended programming language is C++, as is the
                             standard for IO.
@@ -319,10 +319,10 @@ int32_t main() {
                                 View Standard C++ here.
                             </Link>
                         </motion.div>
-                    </div>
+                    </section>
                 </div>
-                <Footer />
             </main>
+            <Footer />
         </>
     );
 }

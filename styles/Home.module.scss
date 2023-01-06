@@ -1,5 +1,5 @@
-@mixin flowy-background {
-    @keyframes flow {
+@mixin f {
+    @keyframes f {
         0%,
         100% {
             background-position: 0 50%;
@@ -10,7 +10,7 @@
         }
     }
 
-    animation: flow 10s ease-in-out infinite;
+    animation: f 10s ease-in-out infinite;
     background: linear-gradient(270deg, #67b26f 0%, #4ca2cd 100%);
     background-size: 250%;
     background-clip: text;
@@ -24,110 +24,77 @@
     align-content: center;
     font-weight: bold;
     text-align: center;
-    padding: 3vw;
+    gap: max(1vw, 4px);
+    padding: 6vw;
     background: transparent;
 
     > h1 {
-        @include flowy-background;
+        @include f;
 
-        font-size: max(4vw, 36px);
+        width: 100%;
+        font-size: max(4vw, 32px);
         color: #00000000;
-        margin: 0.5vw;
     }
 
     > span {
-        font-size: max(2.5vw, 24px);
+        font-size: max(3vw, 24px);
         color: white;
-        letter-spacing: 0.25vw;
+        letter-spacing: max(0.3vw, 3px);
     }
 }
 
 .container {
     background-image: url("../public/circuit_tile.png");
-    padding: 4vw 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 6vw;
-    flex-wrap: wrap;
-
-    > div {
-        width: max(35vw, 240px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1vw;
-
-        > h2 {
-            text-align: center;
-            font-size: max(2vw, 24px);
-            margin: 0;
-        }
-
-        p {
-            text-align: justify;
-            font-size: max(1.5vw, 14px);
-            margin: 0;
-        }
-    }
-
-    > .code {
-        height: max(40vw, 330px);
-        background: #292d35;
-        border-radius: max(2.5vw, 6px);
-        overflow: hidden;
-        padding: 1vw;
-
-        code {
-            font-size: max(0.75vw, 6px);
-            color: #ffffff;
-        }
-    }
-}
-
-.content {
-    background-image: url("../public/circuit_tile.png");
-    padding: 4vw 0;
-    margin: 0;
+    padding: 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4vw;
+    gap: 6vw;
 
-    > div {
-        width: max(50vw, 240px);
+    > section {
+        width: max(100%, 50vw);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1vw;
-
-        a:hover {
-            text-decoration: underline;
-        }
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2vw;
 
         > h2 {
             text-align: center;
-            font-size: max(2vw, 24px);
-            margin: 0;
+            font-size: max(2.4vw, 18px);
         }
 
-        div,
-        p,
-        li,
-        a {
+        > div,
+        > p {
             text-align: justify;
-            font-size: max(1.5vw, 14px);
-            margin: 0;
+            font-size: max(1.5vw, 16px);
+
+            > ol,
+            > ul {
+                > li {
+                    text-align: left;
+                    margin: max(1vw, 4px) max(1.5vw, 12px);
+                }
+            }
+
+            > a:hover {
+                text-decoration: underline;
+            }
         }
 
-        ol,
-        ul {
-            margin: max(1vw, 6px) max(2vw, 12px);
+        > pre {
+            width: max(41vw, 300px);
+            height: 100%;
+            align-self: center;
+            background: #2c2c32;
+            color: #fff;
+            padding: 2vw;
+            border-radius: 1vw;
+            font-size: max(1vw, 10px);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-all;
         }
     }
 }

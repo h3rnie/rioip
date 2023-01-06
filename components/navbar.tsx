@@ -6,17 +6,11 @@ export default function Navbar() {
     return (
         <motion.nav
             className={styles.navbar}
-            initial={{ y: -128 }}
-            animate={{ y: 0 }}
-            transition={{ type: "tween", duration: 1 }}
+            initial={{ y: -64, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "tween" }}
         >
-            <motion.h2
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0, duration: 1 }}
-            >
-                RIOIP
-            </motion.h2>
+            <h2>RIOIP</h2>
             <div>
                 <Link href="/">Home</Link>
                 <Link href="/learn">Intro to C++</Link>

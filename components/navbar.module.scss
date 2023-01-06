@@ -2,23 +2,27 @@
     position: fixed;
     top: 0;
     width: 100%;
-    margin: 0;
-    padding: max(1vw, 12px) max(3vw, 12px);
+    padding: max(0.8vw, 10px) max(2.4vw, 10px);
     background: linear-gradient(20deg, #07a784, #0a7e5e);
     font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    gap: max(2.4vw, 12px);
+    flex-wrap: wrap;
+    z-index: 1;
+
+    @media (max-width: 305px) {
+        justify-content: center;
+    }
 
     > h2 {
-        margin: 0;
-        font-size: max(1.5vw, 18px);
-        padding: max(0.25vw, 2px) max(0.5vw, 2px);
+        padding: max(0.125vw, 4px) max(0.25vw, 4px);
         border: max(0.25vw, 2px) solid #fff;
+        letter-spacing: max(0.25vw, 3px);
+        font-size: max(1.6vw, 18px);
         color: #fff;
-        letter-spacing: max(0.25vw, 2px);
     }
 
     > div {
@@ -26,17 +30,14 @@
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        gap: max(5vw, 10px);
+        gap: max(2.4vw, 12px);
+        font-size: max(1.8vw, 20px);
 
         > a {
-            margin: 0;
-            font-size: max(1.5vw, 18px);
-            padding: max(0.5vw, 4px);
             color: #fff;
-            transform: scale(1);
+            transition: all 250ms ease;
 
             &:hover {
-                transition: all 0.25s ease-out;
                 transform: scale(1.1);
             }
         }
