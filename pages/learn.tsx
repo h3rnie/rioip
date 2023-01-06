@@ -144,17 +144,19 @@ export default function Learn() {
                         makes it easy for programmers to switch to C++ or vice
                         versa.
                     </p>
-                    <h2>Briefing on IO</h2>
+                    <h2>What is Informatics Olympiad?</h2>
                     <div>
                         <iframe
                             src="https://docs.google.com/presentation/d/e/2PACX-1vQTC0Bu5xYGU9XjyAKpk1dQUoSzXuUya6Vx6Z7oIJdQS6D2Nf-WERd6B9lc8eY7yZ65K66y3GZcB--t/embed?start=false&loop=false&delayms=1"
+                            title="What is Informatics Olympiad?"
                             allowFullScreen={true}
                         />
                     </div>
-                    <h2>Intro to C++</h2>
+                    <h2>Introduction to C++</h2>
                     <div>
                         <iframe
                             src="https://docs.google.com/presentation/d/e/2PACX-1vRFMfKnCLkVha4q1X5NhyS6NMkmsBr0JGBIiqzZA3kuSuHmziG9mslyp1pgppR0lICwxL99OcH7o7lo/embed?start=false&loop=false&delayms=1"
+                            title="Introduction to C++"
                             allowFullScreen={true}
                         />
                     </div>
