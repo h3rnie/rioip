@@ -14,7 +14,11 @@
     "private": true,
     "license": "MIT",
     "homepage": "https://rioip.dev.hernie.me",
-    "author": "Hernie <h3rnie@outlook.com> (https://hernie.me)",
+    "contributors": [
+        "Hernie <hello@hernie.me> (https://hernie.me)",
+        "Popkat (https://github.com/popkat412)",
+        "AJR (https://github.com/AJR07)"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/h3rnie/rioip.git"
@@ -42,7 +46,7 @@
         "framer-motion": "^8.2.4",
         "highlight.js": "^11.7.0",
         "next": "^13.1.1",
-        "prettier": "^2.8.1",
+        "prettier": "^2.8.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-tsparticles": "^2.7.1",
