@@ -36,25 +36,25 @@
         "prettier": "prettier --write ."
     },
     "dependencies": {
-        "framer-motion": "^9.0.1",
+        "framer-motion": "^9.0.2",
         "highlight.js": "^11.7.0",
         "next": "^13.1.6",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-tsparticles": "^2.8.0",
+        "react-tsparticles": "^2.9.0",
         "react-wrap-balancer": "^0.4.0",
         "sass": "^1.58.0",
         "sharp": "^0.31.3",
-        "tsparticles": "^2.8.0",
+        "tsparticles": "^2.9.0",
         "typescript": "^4.9.5"
     },
     "devDependencies": {
         "@next/bundle-analyzer": "^13.1.6",
-        "@types/node": "^18.11.18",
-        "@types/react": "^18.0.27",
+        "@types/node": "^18.13.0",
+        "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.10",
-        "eslint": "^8.33.0",
+        "eslint": "^8.34.0",
         "eslint-config-next": "^13.1.6",
-        "prettier": "^2.8.3"
+        "prettier": "^2.8.4"
     }
 }
